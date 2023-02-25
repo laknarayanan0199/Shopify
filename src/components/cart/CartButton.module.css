@@ -1,0 +1,25 @@
+.button {
+  padding: 0rem 0.5rem;
+  border-radius: 6px;
+  background-color: transparent;
+  border-color: transparent;
+  align-items: center;
+}
+
+.cart {
+  margin: 0.3rem;
+  font-size: 1.3rem;
+  display: flex;
+}
+.badge:hover,
+.badge:active,
+.button:hover,
+.button:active {
+  background-color: transparent;
+  color: white;
+}
+
+.badge {
+  background-color: transparent;
+  font-size: 1rem;
+}

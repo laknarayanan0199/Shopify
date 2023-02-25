@@ -1,0 +1,21 @@
+/* .card {
+  /* text-align: center; 
+  margin: 1rem auto;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+} */
+
+.card {
+  background-color: black;
+  min-height: 15rem;
+  color: white;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}

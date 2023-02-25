@@ -1,0 +1,29 @@
+.search {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  border-radius: 6px;
+}
+
+.search::placeholder {
+  color: black;
+}
+
+.search img {
+  margin: 0.5rem;
+  height: 1.5rem;
+}
+.button {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  background-color: transparent;
+  border-color: transparent;
+  align-items: center;
+}
+
+.button:hover,
+.button:active {
+  /* border-color: transparent; */
+  background-color: transparent;
+  color: white;
+}

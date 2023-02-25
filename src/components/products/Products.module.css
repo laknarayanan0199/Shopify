@@ -1,0 +1,12 @@
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 2rem;
+  max-width: 80%;
+  margin: 2rem;
+  padding-inline-start: 0;
+}
