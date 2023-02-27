@@ -28,8 +28,6 @@ const Products = (props) => {
       .catch((err) => setError(err.message));
   }, []);
 
-  console.log(products, "Hello");
-
   // console.log(filteredProducts, "filter");
 
   const PRODUCTS = products.filter((product) =>

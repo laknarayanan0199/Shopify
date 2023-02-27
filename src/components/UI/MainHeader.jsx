@@ -10,27 +10,25 @@ import classes from "../UI/Header.module.css";
 const MainHeader = () => {
   const dispatch = useDispatch();
   const homePageHandler = () => {
-    dispatch(uiActions.showProducts());
+    dispatch(uiActions.showProducts(false));
   };
 
   return (
-    <header className={classes.header}>
+    <nav className={classes.header}>
       <h1>
         <Link to={"/"} onClick={homePageHandler}>
-          Shop
+          SS
         </Link>
       </h1>
-      <nav>
-        <ul>
-          <li className={classes.listItems}>
-            <SearchPage />
-          </li>
-          <li className={classes.listItems}>
-            <CartButton />
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <ul>
+        <li className={classes.listItems}>
+          <SearchPage />
+        </li>
+        <li className={classes.listItems}>
+          <CartButton />
+        </li>
+      </ul>
+    </nav>
   );
 };
 

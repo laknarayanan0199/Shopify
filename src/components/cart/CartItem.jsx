@@ -29,8 +29,9 @@ const CartItem = (props) => {
       <header>
         <h3>{title}</h3>
         <div className={classes.price}>
-          {totalPrice}
-          <span className={classes.itemprice}>(Rs.{price}/item)</span>
+          ${totalPrice}
+          {" "}
+          <span className={classes.itemprice}>(${price}/item)</span>
         </div>
       </header>
       <div className={classes.details}>

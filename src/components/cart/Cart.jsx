@@ -9,7 +9,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   const productsPageNavigator = () => {
     dispatch(uiActions.showCart());

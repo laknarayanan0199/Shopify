@@ -11,8 +11,9 @@ const uiSlice = createSlice({
       state.cartIsVisible = !state.cartIsVisible;
       state.productsIsVisible = !state.productsIsVisible;
     },
-    showProducts(state) {
+    showProducts(state, action) {
       state.productsIsVisible = true;
+      state.cartIsVisible = action.payload;
     },
   },
 });
