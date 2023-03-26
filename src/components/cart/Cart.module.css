@@ -1,9 +1,11 @@
 .cart {
-  max-width: 30rem;
+  max-width: 35rem;
   background-color: black;
   color: white;
   display: block;
-  margin: 1rem auto;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .cart h2 {

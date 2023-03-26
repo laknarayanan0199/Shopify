@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
+import { useFetch } from "../utils/FetchProducts";
 import ProductItem from "./ProductItem";
 import classes from "./Products.module.css";
 
 const Products = (props) => {
   const { filteredProducts } = useSelector((state) => state.products);
 
-  const [products, setProducts] = useState([]);
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    setIsLoading(true);
-    fetch("https://dummyjson.com/products")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Page Not Found");
-        }
-        return res.json();
-      })
-      .then((prod) => {
-        setProducts(prod.products);
-        setIsLoading(false);
-      })
-      .catch((err) => setError(err.message));
-  }, []);
-
-  // console.log(filteredProducts, "filter");
+  const { products, isLoading, error } = useFetch();
 
   const PRODUCTS = products.filter((product) =>
     product.title.toLowerCase().includes(filteredProducts.toLowerCase())
@@ -46,6 +25,7 @@ const Products = (props) => {
           <ProductItem
             key={item.id}
             id={item.id}
+            image={item.image}
             name={item.title}
             price={item.price}
             description={item.description}

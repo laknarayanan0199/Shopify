@@ -1,0 +1,15 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: black;
+  color: white;
+  padding: 1.5rem;
+  margin: 4rem;
+  border-radius: 2rem;
+}
+
+.product img {
+  max-width: 15rem;
+}

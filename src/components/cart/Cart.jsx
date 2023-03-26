@@ -1,23 +1,22 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
-import Card from "../UI/Card";
-import { uiActions } from "../../store/uiSlice";
+import { useNavigate } from "react-router";
 
 const Cart = () => {
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const cartItems = useSelector((state) => state.cart.items);
   // console.log(cartItems);
 
   const productsPageNavigator = () => {
-    dispatch(uiActions.showCart());
+    navigate("/");
   };
 
   return (
-    <Card className={classes.cart}>
-      <div>
+    // <Card>
+      <div className={classes.cart}>
         {cartItems.length === 0 ? (
           <div className={classes.emptyCart}>
             <p>Your Cart is empty</p>
@@ -43,7 +42,7 @@ const Cart = () => {
           ))}
         </ul>
       </div>
-    </Card>
+    // </Card>
   );
 };
 
